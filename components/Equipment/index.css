@@ -1,0 +1,19 @@
+.block {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.block__select:not(:last-child) {
+  margin-right: 10px;
+}
+
+.block-right {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.block__sizes {
+  display: flex;
+  flex-direction: row;
+}
