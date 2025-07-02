@@ -4,7 +4,7 @@ import { IBaseFormProps } from '../../../types/goods'
 import { GOODS_IS_BESTSELLER, GOODS_IS_NEW, GOODS_POPULARITY, MICROGREEN_TYPES } from '../../../constants/goodsTypes'
 import { allowedImageExtensions } from '../../../utils/validation'
 import '../index.css'
-import { MicrogreenCharacteristics } from '../PeasCharacteristics/MicrogreenCharacteristics'
+import { MicrogreenCharacteristics } from '../MicrogreenCharacteristics/MicrogreenCharacteristics'
 
 export const MicrogreenForm = ({ handleSelectType, maxImagesCount, type }: IBaseFormProps) => {
   return (

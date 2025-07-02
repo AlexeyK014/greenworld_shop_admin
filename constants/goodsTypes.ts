@@ -28,6 +28,10 @@ export const EQUIPMENTS_TYPES = [
   { id: 4, name: 'agrovata' },
 ]
 
+export const NEWS_TYPES = [
+  { id: 1, name: 'news' },
+]
+
 export const GOODS_POPULARITY = [
   { id: 1, name: 300 },
   { id: 2, name: 500 },

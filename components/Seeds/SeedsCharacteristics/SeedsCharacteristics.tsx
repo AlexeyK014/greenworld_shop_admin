@@ -1,33 +1,37 @@
 /* eslint-disable no-unused-vars */
-import { required, SelectInput } from 'react-admin'
-import { GOODS_SHELF_LIFE, SEEDS_DURATION_OF_GROWTH, SEEDS_NUTRITIONAL_VALUE, SEEDS_WEIGHT,  } from '../../../constants/goodsCharacteristics'
+import { NumberInput, required, SelectInput, TextInput } from 'react-admin'
+import { GOODS_SHELF_LIFE, SEEDS_DURATION_OF_GROWTH, SEEDS_NUTRITIONAL_VALUE, SEEDS_WEIGHT, } from '../../../constants/goodsCharacteristics'
 
 export const SeedsCharacteristics = () => (
   <>
     <div className='block'>
-      <SelectInput
+      <NumberInput
+        min={0}
         className='block__select'
-        choices={SEEDS_NUTRITIONAL_VALUE}
-        source='Полезные свойства'
+        source='germinationPeriod'
         validate={[required()]}
-        defaultValue={SEEDS_NUTRITIONAL_VALUE[0].name}
-        optionValue='name'
+        label='Период прорастания'
       />
-      <SelectInput
-        className='block__select'
-        choices={SEEDS_WEIGHT}
-        source='Вес'
+      <TextInput
+        source='nutritionalValue'
         validate={[required()]}
-        defaultValue={SEEDS_WEIGHT[0].name}
-        optionValue='name'
+        multiline
+        resettable
+        label='Полезные свойства'
       />
-      <SelectInput
+      <NumberInput
+        min={0}
         className='block__select'
-        choices={SEEDS_DURATION_OF_GROWTH}
-        source='Период проростания'
+        source='expirationDate'
         validate={[required()]}
-        defaultValue={SEEDS_DURATION_OF_GROWTH[0].name}
-        optionValue='name'
+        label='Срок годности'
+      />
+      <NumberInput
+        min={0}
+        className='block__select'
+        source='weight'
+        validate={[required()]}
+        label='Вес'
       />
     </div>
   </>

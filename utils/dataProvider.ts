@@ -1,5 +1,6 @@
 import api from '../api/apiInstance'
 import { IUser } from '../types/users'
+import { INews } from '../types/news'
 
 export const convertImageToDataUrl = async (src: string, title: string) => {
   const imgBlob = await fetch(src).then((result) => result.blob())
@@ -32,6 +33,23 @@ export const getCreatedUser = async (user: IUser) => {
 
   const { data } = await api.post('/admin/add-user', {
     ...user,
+    image,
+  })
+
+  return data
+}
+
+export const getCreatedNews = async (news: INews) => {
+  let image: unknown
+
+  if (news.image) {
+    const img = news.image
+
+    image = await convertImageToDataUrl(img.src, img.title)
+  }
+
+  const { data } = await api.post('admin/add-news', {
+    ...news,
     image,
   })
 

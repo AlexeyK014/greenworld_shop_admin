@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { NumberInput, required, SelectInput, TextInput } from 'react-admin'
-import { GOODS_SHELF_LIFE, MICROGREEN_NUTRITIONAL_VALUE, MICROGREEN_TASTE, SPROUTS_NUTRITIONAL_VALUE, SPROUTS_VOLUME } from '../../../constants/goodsCharacteristics'
+import { GOODS_SHELF_LIFE, MICROGREEN_NUTRITIONAL_VALUE, MICROGREEN_TASTE } from '../../../constants/goodsCharacteristics'
 
-export const SproutsCharacteristics = () => (
+export const MicrogreenCharacteristics = () => (
   <>
     <div className='block'>
       <TextInput
@@ -25,13 +25,6 @@ export const SproutsCharacteristics = () => (
         source='expirationDate'
         validate={[required()]}
         label='Срок годности'
-      />
-      <NumberInput
-        min={0}
-        className='block__select'
-        source='weight'
-        validate={[required()]}
-        label='Вес'
       />
     </div>
   </>

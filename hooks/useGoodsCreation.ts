@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export const useGoodsCreation = (types: { id: number; name: string }[]) => {
   // когда юзер выбирает другой тип, мы должны показывать хар-ки для каждого типа
-//   // делаем динамические значения типов
+  // делаем динамические значения типов
   const [type, setType] = useState('')
 
   // обновляем тип

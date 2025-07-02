@@ -7,3 +7,5 @@ export const SEEDS_SOURCE_NAME = 'seeds'
 export const EQUIPMENTS_SOURCE_NAME = 'equipment'
 
 export const USERS_SOURCE_NAME = 'users'
+
+export const NEWS_SOURCE_NAME = 'news'
