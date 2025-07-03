@@ -26,6 +26,7 @@ export const NewsForm = ({ handleSelectType, maxImagesCount, type }: IBaseFormPr
             label='Название'
           />
           <TextInput
+            // className='block__textInput'
             source='text'
             validate={[required()]}
             multiline
